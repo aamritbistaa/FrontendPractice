@@ -1,0 +1,25 @@
+$red-color: #e30709;
+$gray-color: #292424;
+$greenish-color: #233d42;
+
+$reddish-color: #410003;
+$breakpoint-desktop: 1080px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 425px;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Font/Roboto/Roboto-Medium.ttf") format("tff"); // Adjust the path accordingly
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}

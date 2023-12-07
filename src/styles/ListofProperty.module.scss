@@ -1,0 +1,15 @@
+@import "mixin";
+
+.wrapper {
+  padding: 25px;
+  display: flex;
+  // height: 400px;
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+  @include tablet {
+    background-color: white;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

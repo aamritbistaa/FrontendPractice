@@ -1,0 +1,128 @@
+@import "mixin";
+
+.wrapper {
+  background-color: black;
+  // background-color: ;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100px;
+
+  padding: 20px;
+
+  font-family: "Roboto", sans-serif;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 10px;
+    justify-content: space-between;
+    height: 80px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    justify-content: space-between;
+    padding: 10px 5px;
+  }
+
+  &_menulist {
+    margin-top: auto;
+    height: 100vh;
+    background-color: black;
+    @media (max-width: 1024px) {
+      width: 40vw;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      width: 50vw;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: inherit;
+      border: none;
+    }
+  }
+  &_menubutton {
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+  &_title {
+    img {
+      width: 60px;
+      transform: scale(1.2);
+      overflow: hidden;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 24px;
+      scale: 1;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+      scale: 0.8;
+    }
+  }
+  &_leftbox {
+    display: flex;
+    align-items: center;
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &_rightbox {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 5px 10px;
+      @media (max-width: $breakpoint-tablet) {
+        padding: 0px;
+        width: 125px;
+        font-size: 13px;
+        padding: 2px;
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+    }
+  }
+
+  button {
+    padding: 5px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    background-color: inherit;
+    border: transparent;
+    transition: all 0.3s ease-in-out;
+
+    // text-shadow: 2px 2px 1px $red-color;
+    @media (max-width: $breakpoint-tablet) {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      padding: 5px 0px;
+      font-size: 12px;
+    }
+    svg {
+      font-size: 30px;
+    }
+    &:hover {
+      cursor: pointer;
+      text-decoration: 3px solid underline;
+      transform: scale(1.1, 1.1);
+      transition: all 0.3s ease-in-out;
+      svg {
+        text-decoration: 3px solid underline;
+      }
+    }
+  }
+}

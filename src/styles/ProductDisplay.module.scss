@@ -1,0 +1,118 @@
+@import "mixin";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  //   align-items: center;
+  //   align-content: space-between;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  padding: 10px;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 5px;
+  }
+  @media (max-width: 420px) {
+    padding: 3px;
+  }
+
+  &_product:hover {
+    box-shadow: 2px 3px 5px red;
+  }
+  &_product {
+    border-radius: 5px;
+    overflow: hidden;
+    // min-height: 200px;
+    width: 188px;
+    margin: 7px;
+
+    justify-content: space-between;
+    background-color: lightgray;
+    color: $gray-color;
+
+    text-align: left;
+
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 160px;
+      margin: 5px;
+    }
+    @media (max-width: 420px) {
+      width: 140px;
+      margin: 3px;
+      height: auto;
+    }
+    img {
+      width: 188px;
+      height: 188px;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 160px;
+        height: 160px;
+      }
+      @media (max-width: $breakpoint-mobile) {
+        width: 140px;
+        height: 140px;
+      }
+    }
+    &_info {
+      padding: 5px;
+      font-size: 14px;
+      line-height: 20px;
+
+      &_title {
+        height: 38px;
+        overflow: hidden;
+      }
+
+      &_tagline {
+        color: rgb(49, 104, 49);
+        font-size: 10px;
+        height: 12px;
+        line-height: 14px;
+        overflow: hidden;
+      }
+      &_currentprice {
+        margin-top: 3px;
+
+        font-size: 18px;
+        font-weight: bold;
+        color: $red-color;
+      }
+      &_oldprice {
+        font-size: 10px;
+        span {
+          font-size: 12px;
+          margin-left: 5px;
+          background-color: $red-color;
+          color: white;
+          border-radius: 5px;
+          padding: 2px 3px;
+        }
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_buttons {
+      display: flex;
+      justify-content: center;
+      button {
+        margin-top: auto;
+
+        background-color: transparent;
+        padding: 5px 10px;
+        font-weight: 600;
+        color: rgb(195, 103, 103);
+        border: 2px solid rgb(195, 103, 103);
+        margin: 0 0 5px 0;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

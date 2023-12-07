@@ -1,0 +1,14 @@
+@import "mixin";
+
+.wrapper {
+  padding: 10px;
+
+  img {
+    width: 100%;
+    height: 280px;
+    @media (max-width: $breakpoint-tablet) {
+      objectfit: "cover";
+      height: "180px";
+    }
+  }
+}
