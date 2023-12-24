@@ -1,0 +1,16 @@
+@import "../../../../styles/mixin";
+.wrapper {
+  height: 580px;
+  width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  margin-bottom: 90px;
+  background-color: black;
+  @include mobile {
+    margin-top: 28px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    overflow: scroll;
+  }
+}

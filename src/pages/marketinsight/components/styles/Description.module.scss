@@ -1,0 +1,115 @@
+@import "../../../../styles/mixin";
+.wrapper {
+  //   background-color: blue;
+  width: 95%;
+  margin: auto;
+  padding: 34px;
+  background-color: #fefeff;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  box-shadow: -4px 24px 38px 0px #a1adcd1f;
+  margin-top: 73px;
+  margin-bottom: 100px;
+  font-family: Montserrat;
+
+  @include mobile {
+    padding: 14px 11.5px;
+    border-radius: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 52px;
+    @include mobile {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      margin-bottom: 24px;
+      // text-align: left;
+    }
+  }
+  img {
+    margin-bottom: 24px;
+  }
+  li,
+  h5 {
+    margin-bottom: 12px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &_details {
+    display: flex;
+
+    justify-content: space-between;
+    li {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 27px;
+      text-align: left;
+      @include mobile {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+      }
+    }
+
+    &_second {
+      li {
+        color: #3e3f82;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+
+        @include mobile {
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 17px;
+          text-align: center;
+        }
+      }
+    }
+    &_third {
+      li {
+        color: #427465;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+
+        @include mobile {
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 17px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../../styles/mixin";
+.Heading {
+  padding: 24px 60px;
+  margin-bottom: 32px;
+  background: linear-gradient(
+    180deg,
+    #d12d34 0%,
+    rgba(255, 0, 11, 0.729167) 99.99%,
+    rgba(209, 45, 52, 0) 100%
+  );
+  color: #ffffff;
+  width: max-content;
+  font-family: Montserrat;
+  margin-left: auto;
+  border-radius: 75px 0 0 75px;
+  @include mobile {
+    width: 100%;
+    border-radius: 0;
+    padding: 14px 20px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &_Search {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 16px;
+    @include mobile {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0em;
+    }
+
+    &_Box {
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ffffff;
+      border-radius: 40px;
+      padding: 4px 14px;
+      justify-content: space-between;
+      @include mobile {
+        width: 163px;
+        height: 34px;
+        border-radius: 18px;
+      }
+      input {
+        background-color: inherit;
+        color: inherit;
+        width: 80%;
+        outline: none;
+        color: white;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        @include mobile {
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+      img {
+        height: 18px;
+        filter: grayscale(100%) brightness(0) invert(100%) sepia(0%)
+          saturate(100%) hue-rotate(0deg);
+      }
+    }
+  }
+}

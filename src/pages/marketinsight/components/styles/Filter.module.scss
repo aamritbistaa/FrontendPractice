@@ -1,0 +1,195 @@
+@import "../../../../styles/mixin";
+.wrapper {
+  background-color: #eaeaea;
+  padding: 28px 60px;
+  font-family: Montserrat;
+  letter-spacing: 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  @include mobile {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    @include mobile {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+  }
+  button {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    background-color: #d12d34;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 75px;
+  }
+  &_searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 1;
+
+    justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      gap: 12px;
+    }
+    &_searchwrapper {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 75px;
+      padding: 9px;
+
+      &_searchbox {
+        display: flex;
+        padding: 9px;
+        align-items: center;
+        @include mobile {
+          width: max-content;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          padding: 0px;
+          width: calc(100vw - 40px - 18px);
+        }
+        img {
+          width: 24px;
+          height: 24px;
+          @include mobile {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        input {
+          margin-left: 15px;
+          background-color: inherit;
+          outline: none;
+          width: 700px;
+          @include mobile {
+            margin-left: 0px;
+            width: 235px;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+        }
+      }
+      button {
+        padding: 12px 22px;
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &_buttonContainer {
+        display: flex;
+        gap: 24px;
+        @include mobile {
+          gap: 8px;
+        }
+        &_RoomOption {
+          border-radius: 75px;
+          background-color: #ffffff;
+          padding: 18px 20px;
+          display: flex;
+          gap: 8px;
+          @include mobile {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding: 7px 10px;
+            border-radius: 75px;
+            gap: 6px;
+            img {
+              width: 18px;
+            }
+          }
+          select {
+            background-color: inherit;
+            outline: none;
+          }
+        }
+        &_Filter {
+          button {
+            display: flex;
+            align-items: center;
+            padding: 16px 28px;
+            gap: 3px;
+            @include mobile {
+              font-family: Montserrat;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 15px;
+              padding: 7px 10px;
+              border-radius: 75px;
+              gap: 6px;
+
+              img {
+                width: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_buttonContainer {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    gap: 24px;
+    @include mobile {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    &_buttonWrapper {
+      padding: 4px;
+      background-color: #ffffff;
+      border-radius: 43px;
+      display: flex;
+      overflow-y: auto;
+
+      button {
+        text-align: center;
+        background-color: inherit;
+        color: #666478;
+        min-width: 158px;
+        height: 45px;
+        padding: 12px 16px;
+        border-radius: 34px;
+        @include mobile {
+          font-family: Montserrat;
+          height: auto;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 15px;
+          padding: 7px 10px;
+          border-radius: 75px;
+        }
+      }
+      &_active {
+        background-color: rgba(255, 238, 239, 1) !important;
+        color: rgba(209, 45, 52, 1) !important;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

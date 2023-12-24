@@ -1,0 +1,65 @@
+@import "../../../../styles/mixin";
+.wrapper {
+  font-family: Montserrat;
+
+  padding: 67px;
+  @include mobile {
+    padding: 40px 16px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    @include mobile {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  &_buttonwrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 32px;
+    @include mobile {
+      margin-top: 20px;
+      gap: 0px;
+      justify-content: start;
+
+      overflow-y: scroll;
+    }
+    button {
+      width: 132px;
+      height: 55px;
+      padding: 12px 16px;
+      border-radius: 34px;
+      box-shadow: -4px 24px 38px 0px #a1adcd1f;
+      @include mobile {
+        min-width: 80px;
+        height: 45px;
+        // top: 1409px
+        // left: 16px
+        // padding: 12px, 16px, 12px, 16px
+        border-radius: 44px;
+        border: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        box-shadow: none;
+      }
+    }
+    &_active {
+      //   border: 1.5px solid #d12d34;
+      border: 2.5px solid #d12d34;
+      color: #d12d34;
+      background-color: #ffeeef;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 16px;
+    }
+  }
+}
