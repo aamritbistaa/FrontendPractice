@@ -1,0 +1,188 @@
+@import "../../../styles/mixin";
+.container {
+  // padding: 48px 60px 124px 164px;
+  padding-left: 60px;
+  padding-top: 48px;
+  padding-bottom: 124px;
+  padding-right: 164px;
+  background-color: #fefeff;
+  font-family: Montserrat;
+
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    &_searchbox {
+      border-radius: 75px;
+      padding: 5px;
+      box-shadow: -4px 10px 41px 0px #a1adcd2e;
+
+      // width: 827px;
+      input {
+        background-color: inherit;
+        color: #39393d;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        outline: none;
+        margin-left: 11px;
+        width: 725px;
+      }
+      button {
+        border-radius: 75px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        background-color: #d12d34;
+        color: #ffffff;
+        padding: 12px 22px;
+      }
+    }
+
+    &_filter {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #363352;
+      padding: 14px 16px 15px 20px;
+      display: flex;
+      gap: 24px;
+      border-radius: 75px;
+      box-shadow: -4px 10px 41px 0px #a1adcd2e;
+
+      select {
+        background-color: inherit;
+        outline: none;
+      }
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  &_wrapper {
+    margin-top: 48px;
+    &_heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        color: #2e2c41;
+      }
+      span {
+        color: #9b99ae;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+
+    &_cardCollection {
+      display: flex;
+      flex-wrap: wrap;
+
+      row-gap: 64px;
+      column-gap: 48px;
+      margin-top: 40px;
+      margin-left: 104px;
+      &_card {
+        width: 524px;
+        height: 400px;
+        border-radius: 24px;
+        position: relative;
+
+        &_content {
+          width: fit-content;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+
+          color: #363352;
+
+          background-color: rgba(254, 254, 255, 0.48);
+          height: 172px;
+          border-radius: 15px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 19px 18px;
+
+          gap: 11px;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 29px;
+            color: rgba(54, 51, 82, 1);
+          }
+          &_other {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #d12d34;
+              color: #ffffff;
+              border-radius: 20px;
+
+              // width: 184px;
+
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 17px;
+              padding: 10px 12px;
+
+              span {
+                font-weight: 400;
+                color: #ffffff;
+              }
+              img {
+                margin-left: 14px;
+              }
+            }
+            &_sales {
+              span {
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: rgba(54, 51, 82, 1);
+                padding: 10px 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &_showmore {
+      color: rgba(209, 45, 52, 1);
+      margin-top: 64px;
+      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
