@@ -12,16 +12,24 @@
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+  @include mobile {
+    padding: 30px 20px;
+  }
 
   &_header {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
     &_searchbox {
       border-radius: 75px;
       padding: 5px;
       box-shadow: -4px 10px 41px 0px #a1adcd2e;
+      display: flex;
+      justify-content: space-between;
 
-      // width: 827px;
       input {
         background-color: inherit;
         color: #39393d;
@@ -31,6 +39,12 @@
         outline: none;
         margin-left: 11px;
         width: 725px;
+
+        @include mobile {
+          width: 70%;
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
       button {
         border-radius: 75px;
@@ -40,6 +54,11 @@
         background-color: #d12d34;
         color: #ffffff;
         padding: 12px 22px;
+        @include mobile {
+          font-size: 12px;
+          line-height: normal;
+          padding: 8px 10px;
+        }
       }
     }
 
@@ -63,6 +82,13 @@
         height: 24px;
         width: 24px;
       }
+      @include mobile {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 15px;
+        gap: 10px;
+        justify-content: center;
+      }
     }
   }
 
@@ -73,17 +99,30 @@
       align-items: center;
       gap: 16px;
 
+      @include mobile {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+      }
+
       h3 {
         font-size: 24px;
         font-weight: 700;
         line-height: 36px;
         color: #2e2c41;
+        @include mobile {
+          font-size: 20px;
+        }
       }
       span {
         color: #9b99ae;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
+        @include mobile {
+          font-size: 14px;
+          line-height: normal;
+        }
       }
     }
 
@@ -95,11 +134,24 @@
       column-gap: 48px;
       margin-top: 40px;
       margin-left: 104px;
+      @include mobile {
+        margin-left: 0;
+        row-gap: 0;
+        column-gap: 0;
+        gap: 20px;
+      }
+
       &_card {
         width: 524px;
         height: 400px;
         border-radius: 24px;
         position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
 
         &_content {
           width: fit-content;
@@ -123,12 +175,20 @@
           padding: 19px 18px;
 
           gap: 11px;
+          @include mobile {
+            padding: 10px;
+            height: 40%;
+          }
 
           h4 {
             font-size: 20px;
             font-weight: 600;
             line-height: 29px;
             color: rgba(54, 51, 82, 1);
+            @include mobile {
+              font-size: 18px;
+              line-height: normal;
+            }
           }
           &_other {
             display: flex;
@@ -136,6 +196,9 @@
             justify-content: center;
             flex-direction: column;
             gap: 20px;
+            @include mobile {
+              gap: 10px;
+            }
             button {
               display: flex;
               align-items: center;
@@ -144,12 +207,14 @@
               color: #ffffff;
               border-radius: 20px;
 
-              // width: 184px;
-
               font-size: 14px;
               font-weight: 600;
               line-height: 17px;
               padding: 10px 12px;
+              @include mobile {
+                font-size: 12px;
+                padding: 8px 10px;
+              }
 
               span {
                 font-weight: 400;
@@ -157,18 +222,28 @@
               }
               img {
                 margin-left: 14px;
+                width: 8px;
+                height: 8px;
+                object-fit: cover;
+                @include mobile {
+                  margin-left: 5px;
+                }
               }
             }
             &_sales {
+              gap: 10px;
               span {
-                font-family: Montserrat;
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 17px;
-                letter-spacing: 0em;
                 text-align: left;
-                color: rgba(54, 51, 82, 1);
+
                 padding: 10px 15px;
+                @include mobile {
+                  font-size: 12px;
+                  line-height: normal;
+                  padding: 5px;
+                }
               }
             }
           }
@@ -183,6 +258,10 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+
+      @include mobile {
+        margin-top: 32px;
+      }
     }
   }
 }
