@@ -5,7 +5,7 @@ $greenish-color: #233d42;
 $reddish-color: #410003;
 $breakpoint-desktop: 1080px;
 $breakpoint-tablet: 768px;
-$breakpoint-mobile: 428px;
+$breakpoint-mobile: 450px;
 
 @font-face {
   font-family: "Roboto";
@@ -14,7 +14,7 @@ $breakpoint-mobile: 428px;
   font-style: normal;
 }
 @mixin mobile {
-  @media (max-width: calc($breakpoint-mobile + 1px)) {
+  @media (max-width: calc($breakpoint-mobile )) {
     @content;
   }
 }
